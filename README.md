@@ -15,3 +15,6 @@ async function fullscreen_toggle() {
     }
 }
 ```
+
+### end_fullscreen()
+
