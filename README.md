@@ -18,3 +18,11 @@ async function fullscreen_toggle() {
 
 ### end_fullscreen()
 
+```JavaScript
+async function end_fullscreen() {
+
+    if (document.fullscreenElement) {
+        await close_fullscreen_async();
+    }
+}
+```
