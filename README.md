@@ -18,6 +18,8 @@ async function fullscreen_toggle() {
 
 ### end_fullscreen()
 
+Will end full-screen mode if in full-screen, else it will do nothing.
+
 ```JavaScript
 async function end_fullscreen() {
 
