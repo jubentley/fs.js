@@ -1,13 +1,18 @@
-﻿/*####################################################################################
+/*####################################################################################
 ##  fs.js                                                                           ##
-##  Version: 1.2                                                                    ##
-##  Full Screen Button Handler                                        ###### ###### ##
-##  Justin Bentley 2022 - 2024                                         ##    ##     ##
-##                                                                    ##      ##    ##
+##  Version: 1.3                                                                    ##
+##  Full Screen Operations                                            ###### ###### ##
+##                                                                     ##    ##     ##
+##  Justin Bentley 2022-2026                                          ##      ##    ##
 ##                                                             ##  ####   ######    ##
 ####################################################################################*/
 
+/*
 
+~ Due to Security from Browsers this must be be "user triggered" via a <btn> etc
+  It cannot be called on-load
+
+ */
 
 //callbacks and onload must use Promises to resolve the onload/responce
 function open_fullscreen_async() {
@@ -46,7 +51,9 @@ async function fullscreen_toggle() {
     if (document.fullscreenElement) {
         await close_fullscreen_async();
     } else {
-        await open_fullscreen_async()
+        await open_fullscreen_async();
+        /* Override Edge FS Border Radius */
+        document.fullscreenElement?.style.setProperty("border-radius", "0", "important");
     }
 }
 
