@@ -2,7 +2,7 @@
 JavaScript Full Screen Operation Script
 
 ## Attributes
-* Will override Edge border radius on fullscreen
+* Overrides Edge border radius on fullscreen
 * Self-contained and infinitely recallable
 * Will not work on iphone, have tried, not sure anything will, works on most everywhere else
   
